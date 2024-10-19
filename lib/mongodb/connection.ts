@@ -1,8 +1,7 @@
 import mongoose from 'mongoose';
 
 let conn: any;
-// const uri = process.env.MONGODB_URI as string;
-const uri = 'mongodb+srv://moxalihighmongodbprod:Cx6QFhHvuSgD3m@cluster0.sidxbd9.mongodb.net/password_vault?retryWrites=true&w=majority&appName=Cluster0';
+const uri = process.env.MONGODB_URI as string;
 
 export const connect = async function () {
   if(!conn) {
