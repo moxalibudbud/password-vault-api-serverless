@@ -1,7 +1,7 @@
 import { AccountModel } from '../lib/mongodb/schema';
 
 export async function search(options: { limit?: string, query?: string } = {}) {
-  const limit = (options.limit === undefined) ? 5 : options.limit;
+  const limit = (options.limit === undefined) ? 0 : options.limit;
   const result = await AccountModel.find({})
   .limit(Number(limit))
   .sort({ createdAt: -1})
