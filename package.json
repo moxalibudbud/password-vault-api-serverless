@@ -9,14 +9,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "mongoose": "^8.7.2"
-  },
   "devDependencies": {
     "@types/node": "^22.7.6",
+    "@vercel/node": "^3.2.23",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "tslib": "^2.6.3",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "mongoose": "^8.7.2"
   }
 }

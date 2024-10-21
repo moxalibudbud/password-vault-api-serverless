@@ -20,10 +20,12 @@
       "node_modules/@types"
     ],
     "paths": {
-      "@api": ["./src/api"],
-      "@api/*": ["./src/api/*"],
-      "@service": ["./src/service"],
-      "@service/*": ["./src/service/*"]
+      "@api": ["./api"],
+      "@api/*": ["./api/*"],
+      "@lib": ["./lib"],
+      "@lib/*": ["./lib/*"],
+      "@service": ["./service"],
+      "@service/*": ["./service/*"]
     }
   },
   "include": [
