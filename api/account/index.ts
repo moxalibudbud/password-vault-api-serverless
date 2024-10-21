@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import * as mongodb from '@lib/mongodb';
-import * as accountService from '@service/account.service';
+import * as mongodb from '../../lib/mongodb';
+import * as accountService from '../../service/account.service';
 
 async function search(query: any = {}, response: VercelResponse) {
   const accounts = await accountService.search();

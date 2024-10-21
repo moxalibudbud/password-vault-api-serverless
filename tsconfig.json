@@ -18,15 +18,7 @@
     ],
     "typeRoots": [
       "node_modules/@types"
-    ],
-    "paths": {
-      "@api": ["./api"],
-      "@api/*": ["./api/*"],
-      "@lib": ["./lib"],
-      "@lib/*": ["./lib/*"],
-      "@service": ["./service"],
-      "@service/*": ["./service/*"]
-    }
+    ]
   },
   "include": [
     "api/**/*",
