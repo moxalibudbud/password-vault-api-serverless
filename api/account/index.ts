@@ -7,13 +7,18 @@ async function search(query: any = {}, response: VercelResponse) {
   return response.status(200).json({ accounts })
 }
 
+async function post(req: VercelRequest, response: VercelResponse) {
+  await accountService.post(req.body);
+  return response.status(200).json({});
+}
+
 export default async function (req: VercelRequest, response: VercelResponse) {
   await mongodb.connect();
 
   if(req.method === 'GET') {
     search(req.query, response);
   } else if (req.method === 'POST') {
-    return response.status(400);
+    post(req, response);
   } else {
     return response.status(400);
   }

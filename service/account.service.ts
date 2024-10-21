@@ -22,7 +22,10 @@ export async function put(_id: string, body: any) {
     $set: { ...body }
   };
 
-  console.log(_id, fields)
-
   await AccountModel.findByIdAndUpdate(_id, fields, { lean: true, new: true });
+}
+
+export async function post(body: any) {
+  const account = new AccountModel(body);
+  await account.save();
 }
