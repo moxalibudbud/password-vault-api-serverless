@@ -8,8 +8,8 @@ async function search(query: any = {}, response: VercelResponse) {
 }
 
 async function post(req: VercelRequest, response: VercelResponse) {
-  await accountService.post(req.body);
-  return response.status(200).json({});
+  const id = await accountService.post(req.body);
+  return response.status(200).json({ id });
 }
 
 export default async function (req: VercelRequest, response: VercelResponse) {

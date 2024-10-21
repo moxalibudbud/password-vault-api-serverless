@@ -28,4 +28,5 @@ export async function put(_id: string, body: any) {
 export async function post(body: any) {
   const account = new AccountModel(body);
   await account.save();
+  return account._id;
 }

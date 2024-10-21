@@ -2,7 +2,6 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import * as mongodb from '../../lib/mongodb';
 import * as accountService from '../../service/account.service';
 
-
 async function get(req: VercelRequest, response: VercelResponse) {
   const account = await accountService.get(req.query.id as string);
   return response.status(200).json({ account });
